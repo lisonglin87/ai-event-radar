@@ -124,6 +124,7 @@ def extract_from_page(page: Page, source: Source, llm: LLM, today: date) -> list
             source_id=source.id,
             source_name=source.name,
             source_url=source.url,
+            source_region=source.region,
         )
         if ev.registration_status not in {"open", "upcoming", "full", "closed", "unknown"}:
             ev.registration_status = "unknown"
@@ -189,6 +190,7 @@ def extract_from_leads(leads: list[dict[str, str]], llm: LLM, today: date, *, ba
                     source_id="web-search",
                     source_name="网络检索",
                     source_url=url,
+                    source_region="global",
                 )
             )
     return events

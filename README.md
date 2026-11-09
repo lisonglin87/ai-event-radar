@@ -32,6 +32,16 @@
 
 新增一个源 = 在 `config/sources.yml` 里加几行，不用改代码。
 
+## 推送范围：只看国内
+
+`config/settings.yml` 里 `scope: cn` 表示只推国内场次（中国大陆 + 港澳），改成 `all` 就恢复全球。判定顺序：
+
+1. 标题/地点/摘要里出现中国地名（含 Shanghai / Beijing 这类英文写法）→ 国内
+2. 有具体地点但没有中国字样（San Jose、Las Vegas…）→ 境外，只记录不推送
+3. 地点为空或纯线上 → 看主办方是不是国内机构（阿里/华为/字节/CCF…），再看来源站是不是国内站
+
+所以「PyTorch Day China」会推，「PyTorch Day Japan」不会；「NVIDIA GTC 中国站」会推，「GTC San Jose」不会。所有境外活动仍会写进 `docs/events.md`，只是不发邮件。
+
 ## 报名状态怎么判断
 
 由模型根据页面原文判定，取值为 `open / upcoming / full / closed / unknown`，并要求给出原文依据（邮件里会带上“依据”一行，方便你人工核对）。

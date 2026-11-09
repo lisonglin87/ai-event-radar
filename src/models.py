@@ -43,6 +43,7 @@ class Event:
     source_id: str = ""
     source_name: str = ""
     source_url: str = ""
+    source_region: str = ""                # cn | global（来自来源配置）
 
     # 运行时填充
     fingerprint: str = ""

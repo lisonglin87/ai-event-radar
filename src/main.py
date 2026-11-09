@@ -17,7 +17,7 @@ import yaml
 
 from .extractor import extract_from_leads, extract_from_page
 from .fetcher import EVENT_HINT, fetch_gdelt, fetch_page, fetch_rss
-from .filtering import fingerprint, is_actionable, merge
+from .filtering import fingerprint, is_actionable, is_domestic, merge
 from .llm import BudgetExceeded, LLM, LLMError
 from .mailer import Mailer, render_html, render_text
 from .models import Event, RunStats, Source
@@ -199,6 +199,11 @@ def main(argv: list[str] | None = None) -> int:
     if args.max_sources:
         sources = sources[: args.max_sources]
     search_cfg = load_queries(CONFIG_DIR / "queries.yml")
+    settings = load_queries(CONFIG_DIR / "settings.yml")
+    scope = str(settings.get("scope", "all")).lower()
+    max_per_mail = int(settings.get("max_per_mail", 18))
+    unknown_cap = int(settings.get("unknown_cap", 8))
+    log.info("推送范围：%s（国内=cn / 全部=all）", "仅国内" if scope == "cn" else "全球")
     only = {x.strip() for x in args.only.split(",") if x.strip()} or None
 
     llm = LLM(max_calls=int(os.getenv("LLM_MAX_CALLS", "60")))
@@ -227,6 +232,10 @@ def main(argv: list[str] | None = None) -> int:
 
     for ev in deduped:
         rec = store.get(ev.fingerprint)
+        # 只要国内：境外场次一律只记录、不推送
+        if scope == "cn" and not is_domestic(ev, ev.source_region):
+            store.upsert(ev, notified=False)
+            continue
         if not is_actionable(ev, today):
             # 已满/已截止/未开启/已结束：只更新记录，不打扰
             if rec is not None:
@@ -246,15 +255,14 @@ def main(argv: list[str] | None = None) -> int:
     unknown_evs = sorted(
         [e for e in candidates if e.registration_status == "unknown"],
         key=lambda e: (e.start_date or "9999", e.title),
-    )[:8]
+    )[:unknown_cap]
     to_notify = open_evs + unknown_evs
     to_notify.sort(key=lambda e: (e.registration_deadline or "9999", e.start_date or "9999"))
 
-    # 单封邮件最多 18 条，避免刷屏；其余仍会写进归档
-    MAX_PER_MAIL = 18
-    stats.omitted = max(0, len(to_notify) - MAX_PER_MAIL)
+    # 单封邮件最多 N 条，避免刷屏；其余仍会写进归档
+    stats.omitted = max(0, len(to_notify) - max_per_mail)
     all_selected = list(to_notify)
-    to_notify = to_notify[:MAX_PER_MAIL]
+    to_notify = to_notify[:max_per_mail]
 
     selected = {e.fingerprint for e in all_selected}
     for ev in deduped:

@@ -49,6 +49,47 @@ ACTIONABLE_STATUSES = {"open", "unknown"}
 
 YEAR_RE = re.compile(r"(20\d{2})")
 
+# ---- 地域判定（scope=cn 时用）----
+CN_PLACE = re.compile(
+    r"(中国|国内|大陆|香港|澳门|大湾区|长三角|珠三角|雄安|"
+    r"北京|上海|广州|深圳|杭州|成都|南京|武汉|西安|苏州|天津|重庆|长沙|合肥|厦门|青岛|郑州|济南|"
+    r"福州|南昌|昆明|贵阳|南宁|海口|太原|石家庄|沈阳|大连|哈尔滨|长春|兰州|银川|西宁|乌鲁木齐|"
+    r"呼和浩特|拉萨|珠海|东莞|佛山|宁波|无锡|常州|温州|嘉兴|绍兴|金华|泉州|"
+    r"广东|浙江|江苏|四川|湖北|陕西|山东|福建|河南|湖南|安徽|江西|云南|贵州|广西|河北|山西|辽宁|"
+    r"吉林|黑龙江|甘肃|宁夏|青海|新疆|西藏|内蒙古|海南|台湾|"
+    r"\bchina\b|\bgreater china\b|\bbeijing\b|\bshanghai\b|\bshenzhen\b|\bhangzhou\b|\bguangzhou\b|"
+    r"\bchengdu\b|\bnanjing\b|\bwuhan\b|\bhong kong\b|\bmacau\b|\bmacao\b|\bsuzhou\b|\bxiamen\b|"
+    r"\bqingdao\b|\bxi'?an\b|\btianjin\b|\bchongqing\b|\bchangsha\b|\bhefei\b|\bzhuhai\b|\bdongguan\b)",
+    re.I,
+)
+CN_ORG = re.compile(
+    r"(阿里|蚂蚁|腾讯|华为|百度|字节|火山引擎|小米|讯飞|京东|美团|滴滴|快手|网易|智源|CCF|"
+    r"中国计算机学会|掘金|SegmentFault|InfoQ|开源中国|OPPO|vivo|商汤|旷视|浪潮|中兴|"
+    r"中国移动|中国电信|中国联通|之江实验室|上海人工智能实验室|面壁|月之暗面|智谱|MiniMax|"
+    r"深度求索|DeepSeek|通义|文心|混元|魔搭|ModelScope)",
+    re.I,
+)
+ONLINE_ONLY = re.compile(r"^(线上|online|virtual|网络|云端|云上)$", re.I)
+
+
+def is_domestic(ev: Event, source_region: str = "") -> bool:
+    """判断活动是否在国内举办（中国大陆 + 港澳）。
+
+    规则顺序：
+    1. 标题/地点/摘要里出现中国地名 → 国内（覆盖「PyTorch Day China」这类海外机构在国内的场次）
+    2. 有具体地点但没中国字样 → 境外
+    3. 线上或地点为空 → 看主办方是不是国内机构，再看来源站是不是国内站
+    """
+    text = f"{ev.title} {ev.location or ''} {ev.summary or ''}"
+    if CN_PLACE.search(text):
+        return True
+    loc = (ev.location or "").strip()
+    if loc and not ONLINE_ONLY.search(loc):
+        return False
+    if CN_ORG.search(ev.organizer or ""):
+        return True
+    return source_region == "cn"
+
 
 def stale_year(ev: Event, today: date) -> bool:
     """标题里写死过去年份的活动（如 2025 年的录播系列）直接判为过期。"""

@@ -76,3 +76,37 @@ def test_stale_year_in_title_is_not_actionable():
 def test_current_year_title_is_actionable():
     ev = make(title="NVIDIA GTC 2026", start_date=None, end_date=None, registration_status="open")
     assert is_actionable(ev, TODAY)
+
+
+# ---- 地域判定 ----
+from src.filtering import is_domestic
+
+
+def test_domestic_by_location():
+    ev = make(location="上海世博中心", title="外滩大会")
+    assert is_domestic(ev, "cn")
+
+
+def test_domestic_by_english_city():
+    ev = make(location="Shanghai", title="NVIDIA GTC China")
+    assert is_domestic(ev, "global")
+
+
+def test_foreign_by_location():
+    ev = make(location="San Jose", title="NVIDIA GTC")
+    assert not is_domestic(ev, "global")
+
+
+def test_foreign_by_organizer_when_online():
+    ev = make(location="", organizer="Anthropic", title="The Briefing")
+    assert not is_domestic(ev, "global")
+
+
+def test_china_in_title_wins():
+    ev = make(location="", organizer="PyTorch Foundation", title="PyTorch Day China 2026")
+    assert is_domestic(ev, "global")
+
+
+def test_cn_source_counts_as_domestic_when_no_location():
+    ev = make(location="", organizer="SegmentFault", title="MatrixNEXT 2026 观众报名")
+    assert is_domestic(ev, "cn")
