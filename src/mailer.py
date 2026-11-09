@@ -6,6 +6,7 @@ import html
 import logging
 import os
 import smtplib
+import ssl
 from datetime import date
 from email.header import Header
 from email.message import EmailMessage
@@ -40,6 +41,27 @@ class Mailer:
     def configured(self) -> bool:
         return bool(self.user and self.password and self.recipients)
 
+    def _ssl_context(self) -> ssl.SSLContext:
+        """优先用 certifi 的根证书。
+
+        部分 python.org 安装的 Python 没跑过 "Install Certificates"，
+        系统 CA 路径为空，直接 SMTP_SSL 会 CERTIFICATE_VERIFY_FAILED。
+        """
+        try:
+            import certifi
+
+            return ssl.create_default_context(cafile=certifi.where())
+        except Exception:  # noqa: BLE001
+            return ssl.create_default_context()
+
+    def _open(self, port: int, use_ssl: bool) -> smtplib.SMTP:
+        if use_ssl:
+            srv: smtplib.SMTP = smtplib.SMTP_SSL(self.host, port, timeout=30, context=self._ssl_context())
+        else:
+            srv = smtplib.SMTP(self.host, port, timeout=30)
+            srv.starttls(context=self._ssl_context())
+        return srv
+
     def send(self, subject: str, html_body: str, text_body: str = "") -> bool:
         if not self.configured:
             log.error("邮件未配置：缺少 SMTP_USER / SMTP_PASSWORD / MAIL_TO")
@@ -52,20 +74,26 @@ class Mailer:
         msg.set_content(text_body or "请使用支持 HTML 的邮件客户端查看。")
         msg.add_alternative(html_body, subtype="html")
 
-        try:
-            if self.ssl_mode:
-                server = smtplib.SMTP_SSL(self.host, self.port, timeout=30)
-            else:
-                server = smtplib.SMTP(self.host, self.port, timeout=30)
-                server.starttls()
-            with server:
-                server.login(self.user, self.password)
-                server.sendmail(self.sender, self.recipients, msg.as_string())
-            log.info("邮件已发送：%s -> %s", subject, self.recipients)
-            return True
-        except Exception as exc:  # noqa: BLE001 - SMTP 异常种类多，统一记录
-            log.error("邮件发送失败：%s", exc)
-            return False
+        # 首选 465(SSL)；SSL 握手失败（部分环境证书不全）或端口不通时自动退到 587(STARTTLS)
+        attempts = [(self.port, self.ssl_mode)]
+        if self.port == 465:
+            attempts.append((587, False))
+        elif self.port == 587:
+            attempts.append((465, True))
+
+        last_err: Exception | None = None
+        for port, use_ssl in attempts:
+            try:
+                with self._open(port, use_ssl) as server:
+                    server.login(self.user, self.password)
+                    server.sendmail(self.sender, self.recipients, msg.as_string())
+                log.info("邮件已发送（%s:%s）：%s -> %s", self.host, port, subject, self.recipients)
+                return True
+            except Exception as exc:  # noqa: BLE001 - SMTP 异常种类多，统一记录
+                last_err = exc
+                log.warning("发信失败（%s:%s）：%s", self.host, port, exc)
+        log.error("邮件发送失败：%s", last_err)
+        return False
 
 
 def _fmt_period(ev: Event) -> str:
