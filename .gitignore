@@ -1,0 +1,11 @@
+# 本地/运行环境
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env
+.DS_Store
+
+# 抓取调试产物
+*.log
+debug/

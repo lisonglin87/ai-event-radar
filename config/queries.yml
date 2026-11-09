@@ -1,0 +1,53 @@
+# 网络检索兜底：抓官方源之外「刚开放报名」的活动线索
+# 两种 type：
+#   rss   = 标准 RSS（Google News 搜索 RSS；GitHub Actions 在海外可正常访问）
+#   gdelt = GDELT 全球新闻库 JSON API（免费无 key，国内外都能通；限制 1 次/5 秒，程序已自动节流）
+
+max_items_per_query: 10
+max_leads: 45
+
+queries:
+  # ---------- Google News（海外线路，GitHub Actions 上可用） ----------
+  - name: google-zh-dev-conf
+    type: rss
+    url: "https://news.google.com/rss/search?q={query}&hl=zh-CN&gl=CN&ceid=CN:zh-Hans"
+    q: "开发者大会 报名"
+
+  - name: google-zh-ai-conf
+    type: rss
+    url: "https://news.google.com/rss/search?q={query}&hl=zh-CN&gl=CN&ceid=CN:zh-Hans"
+    q: "人工智能大会 开放报名"
+
+  - name: google-zh-hackathon
+    type: rss
+    url: "https://news.google.com/rss/search?q={query}&hl=zh-CN&gl=CN&ceid=CN:zh-Hans"
+    q: "黑客松 报名 2026"
+
+  - name: google-en-registration
+    type: rss
+    url: "https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=US:en"
+    q: "conference 2026 \"registration is open\""
+
+  - name: google-en-devday
+    type: rss
+    url: "https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=US:en"
+    q: "developer day 2026 register"
+
+  # ---------- GDELT（免费无 key，但实测限流很凶：连发必 429，默认关闭） ----------
+  - name: gdelt-en-registration
+    type: gdelt
+    enabled: false
+    timespan: 7d
+    q: '"registration is open" conference'
+
+  - name: gdelt-en-devconf
+    type: gdelt
+    enabled: false
+    timespan: 7d
+    q: '"developer conference" registration'
+
+  - name: gdelt-zh-chinese
+    type: gdelt
+    enabled: false
+    timespan: 7d
+    q: "开发者大会 报名"

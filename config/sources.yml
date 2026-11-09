@@ -1,0 +1,212 @@
+# 官方 / 权威信息源清单（从上到下即优先级；模型调用预算不足时先跑前面的）
+#
+# render: js  = 页面是纯前端渲染，requests 抓不到正文，需要无头浏览器（Playwright）
+# enabled     = 置 false 可临时停用某条源
+
+sources:
+  # ---------- 海外大厂 ----------
+  - id: nvidia-events
+    name: NVIDIA
+    url: https://www.nvidia.com/en-us/events/
+    region: global
+    category: 开发者大会
+  - id: nvidia-gtc
+    name: NVIDIA GTC
+    url: https://www.nvidia.com/gtc/
+    region: global
+    category: 开发者大会
+  - id: ms-events
+    name: Microsoft
+    url: https://learn.microsoft.com/en-us/events/
+    region: global
+    category: 技术大会
+  - id: ms-build
+    name: Microsoft Build
+    url: https://build.microsoft.com/
+    region: global
+    category: 开发者大会
+    render: js
+  - id: ms-ignite
+    name: Microsoft Ignite
+    url: https://ignite.microsoft.com/
+    region: global
+    category: 技术大会
+    render: js
+  - id: aws-events
+    name: AWS
+    url: https://aws.amazon.com/events/
+    region: global
+    category: 技术大会
+  - id: aws-reinvent
+    name: AWS re:Invent
+    url: https://reinvent.awsevents.com/
+    region: global
+    category: 技术大会
+  - id: google-dev-events
+    name: Google Developers
+    url: https://developers.google.com/events
+    region: global
+    category: 开发者活动
+    note: 国内网络不可达，GitHub Actions 上正常
+  - id: google-io
+    name: Google I/O
+    url: https://io.google/
+    region: global
+    category: 开发者大会
+    render: js
+    note: 国内网络不可达，GitHub Actions 上正常
+  - id: openai-events
+    name: OpenAI
+    url: https://openai.com/events/
+    region: global
+    category: 发布会
+    render: js
+    note: Cloudflare 可能拦截，失败自动跳过
+  - id: anthropic-events
+    name: Anthropic
+    url: https://www.anthropic.com/events
+    region: global
+    category: 技术活动
+  - id: huggingface-events
+    name: Hugging Face
+    url: https://huggingface.co/events
+    region: global
+    category: 技术活动
+    note: 国内网络不可达，GitHub Actions 上正常
+  - id: github-universe
+    name: GitHub
+    url: https://githubuniverse.com/
+    region: global
+    category: 开发者大会
+  - id: pytorch-events
+    name: PyTorch
+    url: https://pytorch.org/events/
+    region: global
+    category: 技术会议
+  - id: mlh-events
+    name: Major League Hacking
+    url: https://mlh.io/events
+    region: global
+    aggregator: true
+    category: 黑客松
+  - id: techcrunch-events
+    name: TechCrunch
+    url: https://techcrunch.com/events/
+    region: global
+    category: 科技大会
+  - id: lf-events
+    name: Linux Foundation
+    url: https://events.linuxfoundation.org/
+    region: global
+    category: 开源大会
+  - id: techmeme-events
+    name: Techmeme 活动日历
+    url: https://www.techmeme.com/events
+    region: global
+    aggregator: true
+    category: 会议索引
+
+  # ---------- 顶级学术 AI 会议（报名对外开放） ----------
+  - id: neurips
+    name: NeurIPS
+    url: https://neurips.cc/
+    region: global
+    category: 学术会议
+  - id: icml
+    name: ICML
+    url: https://icml.cc/
+    region: global
+    category: 学术会议
+  - id: iclr
+    name: ICLR
+    url: https://iclr.cc/
+    region: global
+    category: 学术会议
+  - id: cvpr
+    name: CVPR
+    url: https://cvpr.thecvf.com/
+    region: global
+    category: 学术会议
+
+  # ---------- 国内大厂 / 机构 ----------
+  - id: aliyun-yunqi
+    name: 阿里云 云栖大会
+    url: https://yunqi.aliyun.com/
+    region: cn
+    category: 开发者大会
+  - id: aliyun-activity
+    name: 阿里云
+    url: https://www.aliyun.com/activity
+    region: cn
+    category: 技术活动
+    note: 含营销活动，靠提示词过滤
+  - id: huawei-hdc
+    name: 华为 HDC 开发者大会
+    url: https://developer.huawei.com/consumer/cn/hdc/
+    region: cn
+    category: 开发者大会
+    render: js
+  - id: huawei-connect
+    name: 华为全联接大会
+    url: https://www.huawei.com/cn/events/huaweiconnect
+    region: cn
+    category: 技术大会
+  - id: baidu-create
+    name: 百度 Create
+    url: https://create.baidu.com/
+    region: cn
+    category: 开发者大会
+    render: js
+  - id: volcengine-events
+    name: 火山引擎（字节跳动）
+    url: https://www.volcengine.com/events
+    region: cn
+    category: 技术大会
+    render: js
+  - id: xiaomi-dev
+    name: 小米开发者
+    url: https://dev.mi.com/
+    region: cn
+    category: 开发者大会
+  - id: iflytek-1024
+    name: 科大讯飞 1024 开发者节
+    url: https://1024.iflytek.com/
+    region: cn
+    category: 开发者大会
+    render: js
+  - id: inclusion-conf
+    name: 蚂蚁集团 外滩大会
+    url: https://www.inclusionconf.com/
+    region: cn
+    category: 科技大会
+    render: js
+  - id: waic
+    name: 世界人工智能大会 WAIC
+    url: https://www.worldaic.com.cn/
+    region: cn
+    category: 科技大会
+    render: js
+  - id: cncc
+    name: 中国计算机大会 CNCC
+    url: https://cncc.ccf.org.cn/
+    region: cn
+    category: 学术会议
+    render: js
+  - id: baai
+    name: 智源研究院
+    url: https://www.baai.ac.cn/
+    region: cn
+    category: 学术会议
+    render: js
+  - id: qcon-cn
+    name: QCon 全球软件开发大会
+    url: https://qcon.infoq.cn/
+    region: cn
+    aggregator: true
+    category: 技术大会
+  - id: segmentfault-events
+    name: SegmentFault 活动
+    url: https://segmentfault.com/events
+    region: cn
+    aggregator: true
+    category: 技术活动
