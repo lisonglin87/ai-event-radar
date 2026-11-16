@@ -1,6 +1,6 @@
 # AI / 技术活动归档
 
-最后更新：2026-11-15 16:47 · 共 147 条
+最后更新：2026-11-16 20:00 · 共 152 条
 
 | 活动 | 主办 | 时间 | 形式 | 报名状态 | 链接 |
 | --- | --- | --- | --- | --- | --- |
@@ -60,15 +60,17 @@
 | Microsoft Ignite 2026 | Microsoft | 2026-11-17 ~ 2026-11-20 | 线上 | ✅ 报名中 | [报名/详情](https://register.ignite.microsoft.com/) |
 | Microsoft Ignite 线上参会（Digital Pass / 线上实验室） | Microsoft | 2026-11-17 ~ 2026-11-20 | 线上 | ✅ 报名中 | [报名/详情](https://aka.ms/MSIgniteFY27RegNow) |
 | PyTorch Day Korea 2026 | PyTorch Korea User Group | 2026-11-21 | Seoul, Korea | ❓ 待确认 | [报名/详情](https://pytorch.org/events/) |
-| BostonHacks | Major League Hacking / BostonHacks | 2026-11-21 ~ 2026-11-22 | Boston, MA, US | ❓ 待确认 | [报名/详情](https://bostonhacks.org/?utm_source=mlh&utm_medium=referral&utm_campaign=events&utm_content=BostonHacks) |
-| Hack Western 13 | Major League Hacking / Hack Western | 2026-11-20 ~ 2026-11-22 | London, Ontario, CA | ❓ 待确认 | [报名/详情](https://hackwestern.com/?utm_source=mlh&utm_medium=referral&utm_campaign=events&utm_content=Hack+Western+13) |
+| BostonHacks | Major League Hacking | 2026-11-21 ~ 2026-11-22 | Boston, MA, US | ❓ 待确认 | [报名/详情](https://bostonhacks.org/?utm_source=mlh&utm_medium=referral&utm_campaign=events&utm_content=BostonHacks) |
+| Hack Western 13 | Major League Hacking | 2026-11-20 ~ 2026-11-22 | London, Ontario, CA | ❓ 待确认 | [报名/详情](https://hackwestern.com/?utm_source=mlh&utm_medium=referral&utm_campaign=events&utm_content=Hack+Western+13) |
+| Tech For Community 2026 | Major League Hacking | 2026-11-21 ~ 2026-11-22 | St. John's, Newfoundland and Labrador / Avalon Peninsula, CA | ❓ 待确认 | [报名/详情](https://tecnurtur.org/hackathon?utm_source=mlh&utm_medium=referral&utm_campaign=events&utm_content=Tech+For+Community+2026) |
+| WHACK (Wellesley Hackathon) | Major League Hacking | 2026-11-21 ~ 2026-11-22 | Wellesley, Massachusetts, US | ❓ 待确认 | [报名/详情](https://www.wellesleyhacks.org/?utm_source=mlh&utm_medium=referral&utm_campaign=events&utm_content=WHACK+%28Wellesley+Hackathon%29) |
 | WeAreDevelopers World Congress India | WeAreDevelopers | 2026-11-25 ~ 2026-11-26 | Bengaluru, India | ❓ 待确认 | [报名/详情](https://www.techmeme.com/r2/www.wearedevelopers.com_conference-india-XcydjE2D.htm) |
 | HackEPS | Major League Hacking | 2026-11-28 ~ 2026-11-29 | Lleida, Lleida, Spain, ES | ❓ 待确认 | [报名/详情](https://hackeps.dev/?utm_source=mlh&utm_medium=referral&utm_campaign=events&utm_content=HackEPS) |
 | HackSheffield11 | Major League Hacking | 2026-11-28 ~ 2026-11-29 | Sheffield, South Yorkshire, GB | ❓ 待确认 | [报名/详情](https://hacksheffield.uk/?utm_source=mlh&utm_medium=referral&utm_campaign=events&utm_content=HackSheffield11) |
 | Anthropic at AWS re:Invent 2026 | Anthropic | 2026-11-30 | The Venetian Resort | ❓ 待确认 | [报名/详情](https://www.anthropic.com/events/anthropic-at-aws-re-invent-2026) |
 | Nvidia GTC | NVIDIA | 2026-11-30 ~ 2026-12-03 | Washington, DC | ❓ 待确认 | [报名/详情](https://www.techmeme.com/r2/www.nvidia.com_gtc_dc_-hAWplwyk.htm) |
 | Nvidia GTC Washington, DC | NVIDIA | 2026-11-30 ~ 2026-12-03 | Washington, DC | ❓ 待确认 | [报名/详情](https://www.techmeme.com/r2/www.nvidia.com_gtc_dc_-hAWplwyk.htm) |
-| Yocto Project Virtual Summit 2026.12 | Yocto Project | 2026-12-01 ~ 2026-12-03 | 线上 | ✅ 报名中 | [报名/详情](https://register.linuxfoundation.org/yocto-project-virtual-summit-2026-12) |
+| Yocto Project Virtual Summit 2026.12 | Yocto Project / Linux Foundation | 2026-12-01 ~ 2026-12-03 | 线上 | ✅ 报名中 | [报名/详情](https://register.linuxfoundation.org/yocto-project-virtual-summit-2026-12) |
 | AWS re:Invent 2026 | AWS | 2026-11-30 ~ 2026-12-04 | Las Vegas, NV | ✅ 报名中 | [报名/详情](https://registration.awsevents.com/flow/awsevents/reinvent2026/reg) |
 | AWS re:Invent 2026 免费线上直播 | AWS | 2026-11-30 ~ 2026-12-04 | 线上 | ✅ 报名中 | [报名/详情](https://livefromreinvent.virtual.awsevents.com/user/login) |
 | AWS re:Invent 2026 线上直播（主题演讲与 50+ 场会议） | AWS | 2026-11-30 ~ 2026-12-04 | 线上 | ✅ 报名中 | [报名/详情](https://livefromreinvent.virtual.awsevents.com/user/login) |
@@ -82,7 +84,7 @@
 | NVIDIA GTC 2027 | NVIDIA | 2027-03-15 ~ 2027-03-18 | San Jose | 🕒 未开启 | [报名/详情](https://www.nvidia.com/gtc/) |
 | Google Cloud Next 2027 | Google Cloud | 2027-04-13 ~ 2027-04-15 | 拉斯维加斯 | ❓ 待确认 | [报名/详情](https://reg.googlecloudevents.com/flow/googlecloud/next27/vegas/page/home?utm_source=cgc-site&utm_medium=et&utm_campaign=FY27-Q2-GLOBAL-GLO39599-physicalevent-er-next27-GA-mc-266744&utm_content=save-the-date-dev-dot-google-events-page&utm_term=-) |
 | ICLR 2027 - The Fifteenth International Conference on Learning Representations | ICLR | 2027-04-26 ~ 2027-04-30 | California | 🕒 未开启 | [报名/详情](https://iclr.cc/Conferences/2027/Dates) |
-| ICML 2027 (Forty-Fourth International Conference on Machine Learning) | ICML | 2027-07-31 ~ 2027-08-06 | Riocentro, Rio de Janeiro, Brazil | 🕒 未开启 | [报名/详情](https://icml.cc/Conferences/2027/Dates) |
+| ICML 2027 (Forty-Fourth International Conference on Machine Learning) | ICML | 2027-07-31 ~ 2027-08-06 | Riocentro, Rio de Janeiro, Brazil | ❓ 待确认 | [报名/详情](https://icml.cc/) |
 | 2026 Google开发者大会 | Google | ? | 上海 | ✅ 报名中 | [报名/详情](https://news.google.com/rss/articles/CBMiSEFVX3lxTE8teWVydldKV1NuNGJwMmpTNE5MaHFodk5IWGdZSWNjRkhIY1FWV2x1UEZlN01rNEdtYjhnU25BSGI0UktpRVpyMg?oc=5) |
 | 2026WAIC启明创投·创业与投资论坛 | 启明创投 | ? | — | ✅ 报名中 | [报名/详情](https://news.google.com/rss/articles/CBMimARBVV95cUxQamRqZ016NkFWNUxYTWxpbVNpYVQyalZVMTMwS2U5UVF4V09ZUjJBeGJZRHFkUm83VzBNNUo4RVhLYWh3c0ZudzRfX3N2WEN4c096czNUaXY2dEI1eUxkbjNqSUdJWmF5QThyUV9pTlpXMm9uZzNJVFNaaXZka0dJR0JmTGxHZjVUaGhpNVpoUktfZ3QzZnZRakpLOUx4dml3eUQ4Mi1zcnBlYUctWXRBOUl0U0NjT0NPTi1mbFdoMi1KVllqYTZfenZXbl9yVExJX3VYZFQya2gxMW1hd1FXTUVuOFk5b1ladWVKeVJMN19PeVFwckN6eDBHSy1DQTh0aldBODRYb0NYbGJzX056U3lJMUxoUkQyQmpIRm5aNGZVVDlTWW1QS3Q2aE8yS2tZS2hZdjR6LUs5U0phNVdzSVNGTnZ2R3Qwa1hQY1RLX3hJbVNBSXRQaUNwamFnZFhwY0ZuUEdKbUNhNElsRlpzTE9XRGJhWjBuTTROUUdUSlo0N01XOFZwNkVadFpZMzEtYUo4aXNXUUdhQUdkSHJtUWF5eEZReFRzRWJ6N1lEenBJcml6aE5ucjJnZU5RNTZmTHhkN0lhU1Vwc3hjZW85WUpaUGZoYlpWc21IV2xGdVp4cDR1TWJUR3c0LWpPMUJSOTJzbGkwMUV6bDhydDNwemJGUnRTS0ZoczlRWGpqMFBXWVc0bTh3OQ?oc=5) |
 | 2026WAIC启明创投·创业与投资论坛——从算力原点到应用落地的进化征程 | 启明创投 | ? | — | ✅ 报名中 | [报名/详情](https://news.google.com/rss/articles/CBMimARBVV95cUxQamRqZ016NkFWNUxYTWxpbVNpYVQyalZVMTMwS2U5UVF4V09ZUjJBeGJZRHFkUm83VzBNNUo4RVhLYWh3c0ZudzRfX3N2WEN4c096czNUaXY2dEI1eUxkbjNqSUdJWmF5QThyUV9pTlpXMm9uZzNJVFNaaXZka0dJR0JmTGxHZjVUaGhpNVpoUktfZ3QzZnZRakpLOUx4dml3eUQ4Mi1zcnBlYUctWXRBOUl0U0NjT0NPTi1mbFdoMi1KVllqYTZfenZXbl9yVExJX3VYZFQya2gxMW1hd1FXTUVuOFk5b1ladWVKeVJMN19PeVFwckN6eDBHSy1DQTh0aldBODRYb0NYbGJzX056U3lJMUxoUkQyQmpIRm5aNGZVVDlTWW1QS3Q2aE8yS2tZS2hZdjR6LUs5U0phNVdzSVNGTnZ2R3Qwa1hQY1RLX3hJbVNBSXRQaUNwamFnZFhwY0ZuUEdKbUNhNElsRlpzTE9XRGJhWjBuTTROUUdUSlo0N01XOFZwNkVadFpZMzEtYUo4aXNXUUdhQUdkSHJtUWF5eEZReFRzRWJ6N1lEenBJcml6aE5ucjJnZU5RNTZmTHhkN0lhU1Vwc3hjZW85WUpaUGZoYlpWc21IV2xGdVp4cDR1TWJUR3c0LWpPMUJSOTJzbGkwMUV6bDhydDNwemJGUnRTS0ZoczlRWGpqMFBXWVc0bTh3OQ?oc=5) |
@@ -94,7 +96,7 @@
 | 2026小游戏开发者大会 | GameRes游资网（报道方，主办方未明确） | ? | 杭州 | ✅ 报名中 | [报名/详情](https://news.google.com/rss/articles/CBMiS0FVX3lxTFBMLXlsUDRVY3pBYTBrdGxsSkx3dl9jeFhqbHE5QzFaZ2UxWmNiQkFFNk5qTDFYbkdld3MyUmJSYVBXR0I0OUx4ejRJTQ?oc=5) |
 | 2026第五届AIGC开发者大会 |  | ? | — | ✅ 报名中 | [报名/详情](https://news.google.com/rss/articles/CBMifEFVX3lxTE9Mal9DMmZXeF9PMk5lSXFkLWZoaGRPcHpwZFBuU0pDZE5YSGhmVkxWU2FBODJTdmdHLVZ5djQ5UXlWSU5oZHJINDM0OTJHclB5Vkplc2h4VUVpdEFQTDZkVmJqVnBkMlVKQ1dHWkdpbWxGRmpaemd3T0o3ajM?oc=5) |
 | 2026脑机接口大会 |  | ? | 上海闵行 | ✅ 报名中 | [报名/详情](https://news.google.com/rss/articles/CBMijAFBVV95cUxQTlFEdkhwSW53SVNNalRYUFdHaXJDZm96UGxzZW83ZzRYMkJuSGJXTFFCbTN4aVZUdElzRUU1S0ZHOXIzallzMG9YLVF6Sl80Z29NOEZCR0tER1Zra0JDOXFfcEJKS2tWTW55NzZzQkFjYks4dXJPcEUyZXMxWnpnMDhLMnFzRFJzVTB4WQ?oc=5) |
-| AI Agent 黑客松 | ForesightNews（报道方，主办方未明） | ? | — | ✅ 报名中 | [报名/详情](https://news.google.com/rss/articles/CBMiWkFVX3lxTE5pYVJmMlVOZFVFZ19yWWRfZG9RVDY5bW1hZTRGak1oeU9VNnphaHVXQVdxa1gtQzdzWHc0SW1Pd3BNOEFpN041SXhvTmYwTlpBeUc2RzVLMmY2dw?oc=5) |
+| AI Agent 黑客松 |  | ? | — | ✅ 报名中 | [报名/详情](https://news.google.com/rss/articles/CBMiWkFVX3lxTE5pYVJmMlVOZFVFZ19yWWRfZG9RVDY5bW1hZTRGak1oeU9VNnphaHVXQVdxa1gtQzdzWHc0SW1Pd3BNOEFpN041SXhvTmYwTlpBeUc2RzVLMmY2dw?oc=5) |
 | ANDROID 开发者峰会 | Google Developers | ? | — | ❓ 待确认 | [报名/详情](https://rsvp.withgoogle.com/events/android-dev-summit-bayview) |
 | AWS Innovate 在线会议 | AWS | ? | 线上 | ❓ 待确认 | [报名/详情](https://aws.amazon.com/cn/events/aws-innovate/?trk=ep_card_main_event_page) |
 | AWS PartnerCast 网络研讨会 | AWS | ? | 线上 | ❓ 待确认 | [报名/详情](https://aws.amazon.com/cn/partners/training/partnercast/?trk=ep_card_event_page) |
@@ -116,15 +118,16 @@
 | Google 地图开发者社区日 | Google Developers | ? | — | ❓ 待确认 | [报名/详情](https://goo.gle/4iGiLGa) |
 | ICLR 2027 参展商招募（Exhibitor Portal） | ICLR | ? | California | ✅ 报名中 | [报名/详情](https://iclr.cc/sponsors/apply) |
 | IMAGINE：非营利组织 | Amazon Web Services（AWS） | ? | — | ❓ 待确认 | [报名/详情](https://aws.amazon.com/cn/government-education/nonprofits/imagine-nonprofit/) |
-| KIRO「鬼点子计划」拍卖会（QCon 上海站黑客松） | QCon 全球软件开发大会 | ? | 上海 | ❓ 待确认 | [报名/详情](https://qcon.infoq.cn/2026/shanghai/track/2010) |
+| KIRO「鬼点子计划」拍卖会（QCon 上海站黑客松） | QCon / Kiro | ? | 上海 | ❓ 待确认 | [报名/详情](https://qcon.infoq.cn/2026/shanghai/track/2010) |
 | KIRO「鬼点子计划」拍卖会（黑客松） | QCon 全球软件开发大会 | ? | 上海 | ❓ 待确认 | [报名/详情](https://qcon.infoq.cn/2026/shanghai/track/2010) |
-| Microsoft Build 2026 | Microsoft | ? | 线上 | 🕒 未开启 | [报名/详情](https://aka.ms/build/info) |
+| Microsoft Build 2026 | Microsoft | ? | — | 🕒 未开启 | [报名/详情](https://aka.ms/build/info) |
 | Microsoft Ignite 线上数字实验室 | Microsoft | ? | 线上 | ✅ 报名中 | [报名/详情](https://aka.ms/MSIgniteFY27RegNow) |
-| NeurIPS 2026 (The Fortieth Annual Conference on Neural Information Processing Systems) | NeurIPS / Neural Information Processing Systems Foundation | ? | Sydney, Atlanta, Paris | ✅ 报名中 | [报名/详情](https://neurips.cc/Register) |
+| NeurIPS 2026 (The Fortieth Annual Conference on Neural Information Processing Systems) | Neural Information Processing Systems Foundation (NeurIPS) | ? | Sydney / Atlanta / Paris | ✅ 报名中 | [报名/详情](https://neurips.cc/Register) |
 | NeurIPS 2026 Author Registration | NeurIPS | ? | Sydney, Atlanta, Paris | ✅ 报名中 | [报名/详情](https://neurips.cc/Conferences/2026/AuthorRegistration) |
 | NeurIPS 2026 PyTorch Foundation / CNCF / AAIF Evening Reception | PyTorch Foundation, CNCF, Agentic AI Foundation | ? | Sydney, Australia | ❓ 待确认 | [报名/详情](https://pytorch.org/events/) |
-| NeurIPS 2026 作者注册 (Author Registration) | NeurIPS | ? | Sydney, Atlanta, Paris | ❓ 待确认 | [报名/详情](https://neurips.cc/Conferences/2026/AuthorRegistration) |
-| NeurIPS 2026 期间 PyTorch/CNCF/AAIF 晚间招待会 | PyTorch Foundation, Cloud Native Computing Foundation (CNCF), Agentic AI Foundation (AAIF) | ? | Sydney, Australia | ❓ 待确认 | [报名/详情](https://pytorch.org/events/) |
+| NeurIPS 2026 作者注册（Author Registration） | Neural Information Processing Systems Foundation (NeurIPS) | ? | Sydney / Atlanta / Paris | ✅ 报名中 | [报名/详情](https://neurips.cc/Conferences/2026/AuthorRegistration) |
+| NeurIPS 2026 期间 PyTorch/CNCF/AAIF 晚间招待会 | PyTorch Foundation, CNCF, Agentic AI Foundation | ? | Sydney, Australia | ❓ 待确认 | [报名/详情](https://pytorch.org/events/) |
+| Open Source Summit Japan | Linux Foundation | ? | Tokyo, Japan | ✅ 报名中 | [报名/详情](https://events.linuxfoundation.org/open-source-summit-japan/register/) |
 | PyTorch Day Japan 2026 | PyTorch Foundation, Hugging Face, IBM, Mitsubishi Electric | ? | Japan | ✅ 报名中 | [报名/详情](https://events.linuxfoundation.org/pytorch-day-japan/register/) |
 | PyTorch Foundation x CNCF x AAIF NeurIPS Evening Reception | PyTorch Foundation, CNCF, Agentic AI Foundation | ? | Sydney, Australia | ❓ 待确认 | [报名/详情](https://pytorch.org/events/) |
 | QCon 全球软件开发大会 2026·上海站 | 极客邦科技 / InfoQ 中国 | ? | 上海 | ❓ 待确认 | [报名/详情](https://qcon.infoq.cn/2026/shanghai/speaker/10479) |
@@ -149,5 +152,7 @@
 | 直播预告 / 告别跨库慢查询！KaiwuDB 多模查询与性能调优实战 | KaiwuDB | ? | 线上 | ❓ 待确认 | [报名/详情](https://segmentfault.com/events) |
 | 第一届黑客松“怀客松2026” | 怀柔（财富号报道） | ? | 怀柔 | ✅ 报名中 | [报名/详情](https://news.google.com/rss/articles/CBMia0FVX3lxTE9HRDVHVVBCbnp0aEd0VnhyUTNnc284UUdTamlvemR0S2E5NElqTXVpUVdQNk5Kakh1T1N0ZjdRRFlwd0kzZmxYZnFLZ1E1bUk1MDNMaFRyQ2VNakRPZ2p0ZWNGM3dQYkd4SW9Z?oc=5) |
 | 第一届黑客松“怀客松2026” | 怀柔（具体主办方未明） | ? | 北京怀柔 | ✅ 报名中 | [报名/详情](https://news.google.com/rss/articles/CBMia0FVX3lxTE9HRDVHVVBCbnp0aEd0VnhyUTNnc284UUdTamlvemR0S2E5NElqTXVpUVdQNk5Kakh1T1N0ZjdRRFlwd0kzZmxYZnFLZ1E1bUk1MDNMaFRyQ2VNakRPZ2p0ZWNGM3dQYkd4SW9Z?oc=5) |
+| 第一届黑客松“怀客松2026” | 怀柔 | ? | 怀柔 | ✅ 报名中 | [报名/详情](https://news.google.com/rss/articles/CBMia0FVX3lxTE9HRDVHVVBCbnp0aEd0VnhyUTNnc284UUdTamlvemR0S2E5NElqTXVpUVdQNk5Kakh1T1N0ZjdRRFlwd0kzZmxYZnFLZ1E1bUk1MDNMaFRyQ2VNakRPZ2p0ZWNGM3dQYkd4SW9Z?oc=5) |
 | 蚂蚁战投首届AI Demo Day | 蚂蚁集团战略投资 | ? | 上海 | ❓ 待确认 | [报名/详情](https://www.inclusionconf.com/) |
 | 讯飞智能汽车技术发布会 | 科大讯飞 | ? | — | ❓ 待确认 | [报名/详情](https://1024.iflytek.com/) |
+| 首届 URP 设计 + 人工智能黑客松 2026：多功能可变形家具 | URP / ArchDaily | ? | — | ✅ 报名中 | [报名/详情](https://news.google.com/rss/articles/CBMixANBVV95cUxOWXJTVVM0TzlPN2hhbTBRTFpzbGZMOVhaQ1QtTUx1OHN6cGhXR0pUNmRnWFo2QVBTRlhENnQ3clhENFVoM081SGhDR2VCZjF4LVdGcEZpZHZPRF9JVjdyZlJZamh3aU1rZWRYWkE3WFR2UkN0ZGJpT2pYeXJ2bnFoOUF1c19hS1RtYzRpYVpxNGhCZVhZOGJPQ0Rka2xhYVJGR2J1M0FFTEdQWDlTaXNndEZJeGlVdG9CaXE1QndPNjcxX0F2OEo4WUhWZHNXZUg4aWVLUHV0Q3ZmTDlrdUdGaGtORHhtdTJMUWdJUFZvSjIzc0dsUHpXLTVsQ0VON1B3ZGhYUnZvenNqYTRrLUszeWg5dlNqZ0VoYndveGxwVkNCY19MM2dnY3YtMTFjdkQyLUFOZHFIZTBqWVBrdm9DMm0yb2RXN3B6QUZBeFo1UWpmY01PN2VES0NNRE5CVnVSNFZxbTNaR0FnSzNIT1Y1aE1kTGdNRzBWVFlZcHhzWUNORkxLQXVraEh0RVZWcFhMemdvWjZmR19YTWVKNjVtYWlwa0dLSXp3QkpwZEJYQkhIRUlzTzZYbnRjd0lFMjVlUVE0aQ?oc=5) |
